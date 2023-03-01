@@ -1,1 +1,1 @@
-E:\resources\Android\android application\android-intro\starter\ActivityDemo\openCV\build\intermediates\cxx\Debug\1n2f24t2\obj\x86
+E:\resources\Android_Files\android application\android-intro\starter\ActivityDemo\openCV\build\intermediates\cxx\Debug\1n2f24t2\obj\x86

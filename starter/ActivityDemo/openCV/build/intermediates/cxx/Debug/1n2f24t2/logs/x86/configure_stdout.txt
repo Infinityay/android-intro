@@ -14,4 +14,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: E:/resources/Android/android application/android-intro/starter/ActivityDemo/openCV/.cxx/Debug/1n2f24t2/x86
+-- Build files have been written to: E:/resources/Android_Files/android application/android-intro/starter/ActivityDemo/openCV/.cxx/Debug/1n2f24t2/x86

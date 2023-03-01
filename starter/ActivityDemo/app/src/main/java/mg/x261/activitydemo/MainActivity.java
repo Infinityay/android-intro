@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         // TODO 1: Find the activity list view in the layout by id (R.id.activity_list_view).
         activityListView = (ListView) findViewById(R.id.activity_list_view);
         // TODO 2: Create an array adapter with the activity names and the layout for the item view.
@@ -46,87 +45,111 @@ public class MainActivity extends AppCompatActivity {
         activityListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (activityNames[position]){
-                    case "ActivityCheckbox":
-                        startActivity(new Intent(MainActivity.this,ActivityCheckbox.class));
-                        break;
-                    case "ActivityDatePicker":
-                        startActivity(new Intent(MainActivity.this,ActivityDatePicker.class));
-                        break;
-                    case "ActivityDatePickerDialog":
-                        startActivity(new Intent(MainActivity.this,ActivityDatePickerDialog.class));
-                        break;
-                    case "ActivityListView":
-                        startActivity(new Intent(MainActivity.this,ActivityListView.class));
-                        break;
-                    case "ActivityProgressBar":
-                        startActivity(new Intent(MainActivity.this,ActivityProgressBar.class));
-                        break;
-                    case "ActivityRadioButton":
-                        startActivity(new Intent(MainActivity.this,ActivityRadioButton.class));
-                        break;
-                    case "ActivityRating":
-                        startActivity(new Intent(MainActivity.this,ActivityRating.class));
-                        break;
-                    case "ActivityRunnableThreadHandler":
-                        startActivity(new Intent(MainActivity.this,ActivityRunnableThreadHandler.class));
-                        break;
-                    case "ActivityScrollView":
-                        startActivity(new Intent(MainActivity.this,ActivityScrollView.class));
-                        break;
-                    case "ActivitySpinner":
-                        startActivity(new Intent(MainActivity.this,ActivitySpinner.class));
-                        break;
-                    case "ActivitySwitch":
-                        startActivity(new Intent(MainActivity.this,ActivitySwitch.class));
-                        break;
-                    case "ActivityTimePicker":
-                        startActivity(new Intent(MainActivity.this,ActivityTimePicker.class));
-                        break;
-                    case "LoadImage":
-                        startActivity(new Intent(MainActivity.this,LoadImage.class));
-                        break;
-                    case "MainButton":
-                        startActivity(new Intent(MainActivity.this,MainButton.class));
-                        break;
-                    case "MainCalendarView":
-                        startActivity(new Intent(MainActivity.this,MainCalendarView.class));
-                        break;
-                    case "MainDialog":
-                        startActivity(new Intent(MainActivity.this,MainDialog.class));
-                        break;
-                    case "MainEditText":
-                        startActivity(new Intent(MainActivity.this,MainEditText.class));
-                        break;
-                    case "MainImageView":
-                        startActivity(new Intent(MainActivity.this,MainImageView.class));
-                        break;
-                    case "MainLinearLayout":
-                        startActivity(new Intent(MainActivity.this,MainLinearLayout.class));
-                        break;
-                    case "MainRelativeLayout":
-                        startActivity(new Intent(MainActivity.this,MainRelativeLayout.class));
-                        break;
-                    case "MainSeekBar":
-                        startActivity(new Intent(MainActivity.this,MainSeekBar.class));
-                        break;
-                    case "MainTable":
-                        startActivity(new Intent(MainActivity.this,MainTable.class));
-                        break;
-                    case "MainTextView":
-                        startActivity(new Intent(MainActivity.this,MainTextView.class));
-                        break;
-                    case "MainToast":
-                        startActivity(new Intent(MainActivity.this,MainToast.class));
-                        break;
-                    default:
-                        Log.d("TAG", "error!");
+                try {
+                    Class<?> activityClass = Class.forName(getPackageName() + '.' + activityNames[position]);
+                    startActivity(new Intent(MainActivity.this,activityClass));
                 }
-                Toast.makeText(MainActivity.this, activityNames[position], Toast.LENGTH_SHORT).show();
+                catch (ClassNotFoundException e){
+                    e.printStackTrace();
+                }
             }
-
-
         });
+
+        // another method
+//        // TODO 1: Find the activity list view in the layout by id (R.id.activity_list_view).
+//        activityListView = (ListView) findViewById(R.id.activity_list_view);
+//        // TODO 2: Create an array adapter with the activity names and the layout for the item view.
+//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,activityNames);
+//        // TODO 3: Set the adapter to the activity list view.
+//        activityListView.setAdapter(arrayAdapter);
+//        // TODO 4:
+//        //   Set an item click listener for the activity list view.
+//        //   In the listener, use a switch statement to start the corresponding activity based on the name of the clicked item.
+//
+//        activityListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                switch (activityNames[position]){
+//                    case "ActivityCheckbox":
+//                        startActivity(new Intent(MainActivity.this,ActivityCheckbox.class));
+//                        break;
+//                    case "ActivityDatePicker":
+//                        startActivity(new Intent(MainActivity.this,ActivityDatePicker.class));
+//                        break;
+//                    case "ActivityDatePickerDialog":
+//                        startActivity(new Intent(MainActivity.this,ActivityDatePickerDialog.class));
+//                        break;
+//                    case "ActivityListView":
+//                        startActivity(new Intent(MainActivity.this,ActivityListView.class));
+//                        break;
+//                    case "ActivityProgressBar":
+//                        startActivity(new Intent(MainActivity.this,ActivityProgressBar.class));
+//                        break;
+//                    case "ActivityRadioButton":
+//                        startActivity(new Intent(MainActivity.this,ActivityRadioButton.class));
+//                        break;
+//                    case "ActivityRating":
+//                        startActivity(new Intent(MainActivity.this,ActivityRating.class));
+//                        break;
+//                    case "ActivityRunnableThreadHandler":
+//                        startActivity(new Intent(MainActivity.this,ActivityRunnableThreadHandler.class));
+//                        break;
+//                    case "ActivityScrollView":
+//                        startActivity(new Intent(MainActivity.this,ActivityScrollView.class));
+//                        break;
+//                    case "ActivitySpinner":
+//                        startActivity(new Intent(MainActivity.this,ActivitySpinner.class));
+//                        break;
+//                    case "ActivitySwitch":
+//                        startActivity(new Intent(MainActivity.this,ActivitySwitch.class));
+//                        break;
+//                    case "ActivityTimePicker":
+//                        startActivity(new Intent(MainActivity.this,ActivityTimePicker.class));
+//                        break;
+//                    case "LoadImage":
+//                        startActivity(new Intent(MainActivity.this,LoadImage.class));
+//                        break;
+//                    case "MainButton":
+//                        startActivity(new Intent(MainActivity.this,MainButton.class));
+//                        break;
+//                    case "MainCalendarView":
+//                        startActivity(new Intent(MainActivity.this,MainCalendarView.class));
+//                        break;
+//                    case "MainDialog":
+//                        startActivity(new Intent(MainActivity.this,MainDialog.class));
+//                        break;
+//                    case "MainEditText":
+//                        startActivity(new Intent(MainActivity.this,MainEditText.class));
+//                        break;
+//                    case "MainImageView":
+//                        startActivity(new Intent(MainActivity.this,MainImageView.class));
+//                        break;
+//                    case "MainLinearLayout":
+//                        startActivity(new Intent(MainActivity.this,MainLinearLayout.class));
+//                        break;
+//                    case "MainRelativeLayout":
+//                        startActivity(new Intent(MainActivity.this,MainRelativeLayout.class));
+//                        break;
+//                    case "MainSeekBar":
+//                        startActivity(new Intent(MainActivity.this,MainSeekBar.class));
+//                        break;
+//                    case "MainTable":
+//                        startActivity(new Intent(MainActivity.this,MainTable.class));
+//                        break;
+//                    case "MainTextView":
+//                        startActivity(new Intent(MainActivity.this,MainTextView.class));
+//                        break;
+//                    case "MainToast":
+//                        startActivity(new Intent(MainActivity.this,MainToast.class));
+//                        break;
+//                    default:
+//                        Log.d("TAG", "error!");
+//                }
+//                Toast.makeText(MainActivity.this, activityNames[position], Toast.LENGTH_SHORT).show();
+//            }
+//
+//
+//        });
 
     }
 

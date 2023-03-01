@@ -2,7 +2,7 @@
   {
     "level_": 0,
     "message_": "Start JSON generation. Platform version: 21 min SDK version: x86",
-    "file_": "E:\\resources\\Android\\android application\\android-intro\\starter\\ActivityDemo\\openCV\\libcxx_helper\\CMakeLists.txt",
+    "file_": "E:\\resources\\Android_Files\\android application\\android-intro\\starter\\ActivityDemo\\openCV\\libcxx_helper\\CMakeLists.txt",
     "tag_": "debug|x86",
     "diagnosticCode_": 0,
     "memoizedIsInitialized": 1,
@@ -11,12 +11,12 @@
       "fieldsDescending": {}
     },
     "memoizedSize": -1,
-    "memoizedHashCode": 1034454965
+    "memoizedHashCode": 1842647037
   },
   {
     "level_": 0,
-    "message_": "JSON \u0027E:\\resources\\Android\\android application\\android-intro\\starter\\ActivityDemo\\openCV\\.cxx\\Debug\\1n2f24t2\\x86\\android_gradle_build.json\u0027 was up-to-date",
-    "file_": "E:\\resources\\Android\\android application\\android-intro\\starter\\ActivityDemo\\openCV\\libcxx_helper\\CMakeLists.txt",
+    "message_": "JSON \u0027E:\\resources\\Android_Files\\android application\\android-intro\\starter\\ActivityDemo\\openCV\\.cxx\\Debug\\1n2f24t2\\x86\\android_gradle_build.json\u0027 was up-to-date",
+    "file_": "E:\\resources\\Android_Files\\android application\\android-intro\\starter\\ActivityDemo\\openCV\\libcxx_helper\\CMakeLists.txt",
     "tag_": "debug|x86",
     "diagnosticCode_": 0,
     "memoizedIsInitialized": 1,
@@ -25,12 +25,12 @@
       "fieldsDescending": {}
     },
     "memoizedSize": -1,
-    "memoizedHashCode": -879906735
+    "memoizedHashCode": -134642223
   },
   {
     "level_": 0,
     "message_": "JSON generation completed without problems",
-    "file_": "E:\\resources\\Android\\android application\\android-intro\\starter\\ActivityDemo\\openCV\\libcxx_helper\\CMakeLists.txt",
+    "file_": "E:\\resources\\Android_Files\\android application\\android-intro\\starter\\ActivityDemo\\openCV\\libcxx_helper\\CMakeLists.txt",
     "tag_": "debug|x86",
     "diagnosticCode_": 0,
     "memoizedIsInitialized": 1,
@@ -39,6 +39,6 @@
       "fieldsDescending": {}
     },
     "memoizedSize": -1,
-    "memoizedHashCode": 826344130
+    "memoizedHashCode": 1634536202
   }
 ]
